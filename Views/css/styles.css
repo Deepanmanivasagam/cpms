@@ -1,0 +1,479 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.delete-btn{
+    padding: 10px 13px;
+    border-radius: 5px;
+    background-color: #1984e9e7;
+}
+.goplay{
+    background-color:#1ae08e;
+    color: white;
+    padding: 10px 40px 10px 50px;
+    position: relative;
+    top: 40px;
+    left: -240px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 10px black;
+}
+#search{
+    padding:10px 20px 10px 20px;
+    font-size: 20px;
+    position: relative;
+    left: 550px;
+    top: 40px;
+}
+#addPlayerForm{
+    position: relative;
+    top: 0px;
+    left: -280px;
+}
+/* Form Styles */
+form {
+    width: 30%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+form input[type="submit"]:hover {
+    background-color: #218838;
+}
+table td a:hover {
+    color: #c82333;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: left;
+  font-size: 16px;
+}
+
+thead {
+  background-color:  #1ae08e;
+  color: white;
+  text-align: center;
+  font-size: 19px;
+}
+
+thead th {
+  padding:15px 10px;
+  border: 1px solid rgb(168, 168, 168);
+}
+
+tbody tr {
+  border-bottom: 1px solid #c7c7c7;
+}
+
+tbody td {
+  padding: 5px 10px;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(168, 168, 168);
+  text-align: center;
+  text-transform: capitalize;
+  background-color:  #f8f8f8;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+table img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+
+/* Button Styles */
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+#search{
+    width: 30%;
+    padding: 10px 30px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(233, 219, 219);
+    border-radius: 15px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  /* Dashboard Sidebar */
+  .dashboard {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #1ae08e;
+    color: #fff;
+    padding: 10px;
+    font-size: 19px;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+  }
+  
+  .sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 0px 0;
+  }
+  
+  .sidebar li a {
+    color: #fff;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar li a:hover {
+    background-color: #16c079;
+  }
+  
+  .sidebar .dropdown {
+    position: relative;
+  }
+  
+  .sidebar .dropdown-toggle {
+    cursor: pointer;
+  }
+  
+  .sidebar .dropdown-menu {
+    display: none;
+    background-color:#1ae08e;
+    padding: 5px 0;
+    border-radius: 4px;
+    margin-left: 10px;
+  }
+  
+  .sidebar .dropdown-menu li {
+    margin: 5px 0;
+  }
+  
+  .sidebar .dropdown-menu li a {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  
+  .sidebar .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* .sidebar .dropdown-submenu ul {
+    display: none;
+    margin-left: 10px;
+  } */
+  .sidebar .dropdown-submenu:hover ul {
+    display: block;
+    background-color:#1ae08e;
+  }
+  span{
+    color: #000000;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    background-color: #b8ddc1e0;
+  }
+
+  /* Basic styles for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#topPlayersList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#topPlayersList li {
+  margin: 10px 0;
+}
+.browseplayer{
+  width: 600px;
+  height: 690px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 45px;
+  right:140px;
+  background-color: #fff;
+  box-shadow: 2px 4px 20px black;
+}
+.browseplayer input{
+  padding: 10px 10px 10px 30px;
+  width: 400px;
+  margin-left: 102px;
+  margin-top: 20px;
+  font-size: 17px;
+  border-radius: 10px;
+}
+.playerdetails{
+  font-size: 18px;
+  line-height: 38px;
+  margin-left: 50px;
+  margin-top: 250px;
+  padding: 20px;
+  width: 480px;
+  height: 270px;
+  border: 1px solid black;
+}
+.playerstable{
+   border: 1px solid white;
+   width: 1200px;
+   height: 600px;
+   overflow: auto;
+   position: absolute;
+  left: 270px;
+  top: 100px;
+}
+#searchBar{
+  position: absolute;
+  padding: 10px 20px 10px 20px;
+  width: 350px;
+  right: 330px;
+  border-radius: 3px;
+  top: 40px;
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+#searchButton{
+  position: absolute;
+  right: 210px;
+  top: 39px;
+  background-color: rgb(51, 243, 153);
+  border: none;
+  padding: 12px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+#playerInfo{
+  position: absolute;
+  right: 4%;
+  top: 120px;
+  width: 700px;
+}
+#playerAge{
+  background-color: #f4f4f4;
+  position: relative;
+  top: -19px;
+  left: 95px;
+  width: 100px;
+  font-weight: bold;
+}
+#playerDOB{
+  background-color: #f4f4f4;
+  position: relative;
+  font-weight: bold;
+  top: -20px;
+  left: 97px;
+  width: 130px;
+}
+#playerCountry{
+  background-color: #f4f4f4;
+  position: relative;
+  font-weight: bold;
+  top: -20px;
+  left: 100px;
+  width: 166px;
+}
+.tab{
+  position: relative;
+  top: -20px;
+  width: 700px;
+}
+#playerName{
+  position: relative;
+  top: -10px;
+}
+#playerRole{
+  background-color: #f4f4f4;
+  position: relative;
+  font-weight: bold;
+  top: -20px;
+  left: 100px;
+  width: 196px;
+}
+#playerProfile{
+  background-color: #f4f4f4;
+  position: relative;
+  top: -23px;
+  left: 98px;
+  width: 668px;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+.line{
+  line-height: 15px;
+}
+.dropdown-submenu span{
+  color: white;
+  background-color: #1ae08e;
+}
+.dropdown-submenu span:hover{
+  background-color: rgba(72, 126, 72, 0.527);
+}
+.test1{
+  background-color: #fff;
+  width: 500px;
+  height: 690px;
+  border: 1px solid black;
+  position: absolute;
+  top: 20px;
+  left: 320px;
+  padding-top: 40px;
+  border-radius:10px;
+  /* display: none; */
+}
+.tab1{
+  height: 580px;
+}
+.battingt20{
+  cursor: pointer;
+}
+.battingodi{
+  cursor: pointer;
+}
+.battingtest{
+  cursor: pointer;
+}
+.headodi{
+  text-align: center;
+}
+.odi1{
+  background-color: #fff;
+  width: 500px;
+  height: 690px;
+  border: 1px solid black;
+  position: absolute;
+  top: 20px;
+  left: 320px;
+  padding-top: 40px;
+  border-radius:10px;
+}
+.headt20{
+  text-align: center;
+}
+.t201{
+  background-color: #fff;
+  width: 500px;
+  height: 690px;
+  border: 1px solid black;
+  position: absolute;
+  top: 20px;
+  left: 320px;
+  padding-top: 40px;
+  border-radius:10px;
+}
+.photos{
+  width: 500px;
+  border: 2px solid black;
+  height:790px;
+  overflow: auto;
+  position: absolute;
+  top: 10px;
+  left: 600px;
+  border: 1px solid black;
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Player</title>
+    <link rel="stylesheet" href="/Views/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Cricket Info</h2>
+      <ul>
+        <li><a class="ac" href="addplayer.html">Add players</a></li>
+        <li><a href="viewplayer.html">View players</a></li>
+        <li><a href="#players">Browse Players</a></li>
+        <li><a href="photos.html" class="photo1">Photos</a></li>
+        <li id="iccrank" class="dropdown">
+           <a class="ranking" href="#icc-rankings">ICC Rankings (Men)</a>
+        <li class="dropdown-submenu">
+          <span class="battingt20" href="">T20 (batters)</span>
+          <span class="battingodi" href="">ODI (batters)</span>
+          <span class="battingtest" href="">Test (batters)</span>
+        </li>
+      </li>
+        <li><a href="news.html">News</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="container">
+        <ul>
+        </ul><br>
+        <form id="addPlayerForm">
+            <label for="name">Player Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="team">Team:</label>
+            <input type="text" id="team" name="team" required>
+
+            <label for="role">Role:</label>
+            <input type="text" id="role" name="role" required>
+
+            <label for="matches">Matches Played:</label>
+            <input type="number" id="matches" name="matches" required>
+
+            <label for="performance">Performance:</label>
+            <input type="text" id="performance" name="performance" required>
+
+            <button type="submit">Add Player</button>
+        </form>
+        <br>
+    </div>
+
+    
+    <div class="container">
+    
+      <!-- Search Bar -->
+      <div>
+        <input type="text" id="searchBar" placeholder="Search for a player...">
+        <button id="searchButton">Search</button>
+      </div>
+      
+      <!-- Player Info -->
+      <div id="playerInfo" style="display: none; margin-top: 20px;">
+        <h2 id="playerName"></h2>
+        <p class="line">Age: <span id="playerAge"></span></p>
+        <p class="line">Date of Birth: <span id="playerDOB"></span></p>
+        <p class="line">Country: <span id="playerCountry"></span></p>
+        <p class="line">Role: <span id="playerRole"></span></p>
+        <p class="line">Profile: <span id="playerProfile"></span></p>
+        
+        <!-- Player Stats Table -->
+        <table class="tab" border="1">
+          <thead>
+            <tr>
+              <th>Format</th>
+              <th>Batting Stats</th>
+              <th>Bowling Stats</th>
+            </tr>
+          </thead>
+          <tbody id="playerStats"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="test1">
+      <h2 style="text-align: center;">Test</h2>
+      <table class="tab1" border="1">
+        <thead>
+         <th>Rank</th>
+         <th>player</th>
+         <th>points</th>
+        </thead>
+        <tbody>
+         <tr>
+             <td>1</td>
+             <td>joe root</td>
+             <td>895</td>
+             <tr><td>2</td>
+                 <td>Harry Brook</td>
+                 <td>876</td></tr>
+             <tr><td>3</td>
+                 <td>Kane williamson</td>
+                 <td>867</td></tr>
+             <tr>
+                 <td>4</td>
+             <td>Travis head</td>
+             <td>825</td>
+             </tr>
+             <tr>
+                 <td>5</td>
+             <td>yashasvi jaiswal</td>
+             <td>805</td>
+             </tr>
+             <tr>
+                 <td>6</td>
+             <td>kanmidu mendis</td>
+             <td>759</td>
+             </tr>
+             <tr>
+                 <td>7</td>
+             <td>Temba bauma</td>
+             <td>753</td>
+             </tr>
+             <tr>
+                 <td>8</td>
+             <td>Daryl mitchell</td>
+             <td>725</td>
+             </tr>
+             <tr>
+                 <td>9</td>
+             <td>saud shaakeel</td>
+             <td>724</td>
+             </tr>
+             <tr>
+                 <td>10</td>
+             <td>steven smith</td>
+             <td>721</td>
+             </tr>
+         </tr>
+        </tbody>
+     </table>
+     </div>
+
+     <div class="odi1">
+      <h2 class="headodi">ODI</h2>
+     <table class="tab1" border="1">
+      <thead>
+       <th>Rank</th>
+       <th>player</th>
+       <th>points</th>
+      </thead>
+      <tbody>
+       <tr>
+           <td>1</td>
+           <td>babar azam</td>
+           <td>795</td>
+           <tr><td>2</td>
+               <td>rohit sharma</td>
+               <td>765</td></tr>
+           <tr><td>3</td>
+               <td>shubman gill</td>
+               <td>763</td></tr>
+           <tr>
+            <tr><td>4</td>
+              <td>virat kholi</td>
+              <td>746</td></tr>
+          <tr>
+               <td>5</td>
+           <td>heinrich klaasen</td>
+           <td>743</td>
+           </tr>
+           <tr>
+               <td>6</td>
+           <td>harry tector</td>
+           <td>737</td>
+           </tr>
+           <tr>
+               <td>7</td>
+           <td>daryl mitchell</td>
+           <td>706</td>
+           </tr>
+           <tr>
+               <td>8</td>
+           <td>shai hope</td>
+           <td>672</td>
+           </tr>
+           <tr>
+               <td>9</td>
+           <td>rahmanullah gurbaz</td>
+           <td>672</td>
+           </tr>
+           <tr>
+               <td>10</td>
+           <td>pathum nissanka</td>
+           <td>671</td>
+           </tr>
+      </tbody>
+   </table>
+  </div>
+
+  <div class="t201">
+    <h2 class="headt20">T20</h2>
+   <table class="tab1" border="1">
+    <thead>
+     <th>Rank</th>
+     <th>player</th>
+     <th>points</th>
+    </thead>
+    <tbody>
+     <tr>
+         <td>1</td>
+         <td>travis head</td>
+         <td>855</td>
+         <tr><td>2</td>
+             <td>philip salt</td>
+             <td>829</td></tr>
+         <tr><td>3</td>
+             <td>tilak varma</td>
+             <td>806</td></tr>
+         <tr>
+          <tr><td>4</td>
+            <td>suryakumar yadav</td>
+            <td>788</td></tr>
+        <tr>
+             <td>5</td>
+         <td>jos buttler</td>
+         <td>717</td>
+         </tr>
+         <tr>
+             <td>6</td>
+         <td>babar azam</td>
+         <td>712</td>
+         </tr>
+         <tr>
+             <td>7</td>
+         <td>yashasvi jaiswal</td>
+         <td>706</td>
+         </tr>
+         <tr>
+             <td>8</td>
+         <td>Mohammad rizwan</td>
+         <td>704</td>
+         </tr>
+         <tr>
+             <td>9</td>
+         <td>reeza hendricks</td>
+         <td>672</td>
+         </tr>
+         <tr>
+             <td>10</td>
+         <td>pathum nissanka</td>
+         <td>672</td>
+         </tr>
+    </tbody>
+ </table>
+</div>
+
+
+    <script src="/public/js/browse.js"></script>
+    <script src="/public/js/addplayer.js"></script>
+    <script src="/public/js/ranking.js"></script>
+</body>
+</html>
